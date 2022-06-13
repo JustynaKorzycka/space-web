@@ -1,15 +1,38 @@
 import Header from '../Header/Header';
-import styles from './Layout.module.scss';
+import { LayoutWrapper } from './Layout.style';
+import { useRouter } from 'next/router'
 
 
 
-const Layout = ({children, backgroundImage}) => {
+const Layout = ({children}) => {
+
+  const {pathname} = useRouter();
+
+  let direction;
+
+  switch(pathname){
+    case '/':
+      direction='home';
+      break;
+    case '/crew':
+      direction='crew';
+      break;
+    case '/destination':
+      direction= 'destination';
+      break;
+    case '/technology':
+      direction= 'technology';
+      break;
+    default:
+      direction='home';
+  }
+  
   return (
-    <div className={styles.Layout} style={{backgroundImage:`url("../../public/assets${backgroundImage}")`}}>
-        {console.log(backgroundImage)}
+    <LayoutWrapper pathname={direction}>
+        
         <Header />
         <main>{children}</main>
-    </div>
+    </LayoutWrapper>
     
   )
 }
