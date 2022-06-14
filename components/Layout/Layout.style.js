@@ -9,11 +9,12 @@ export const LayoutWrapper = styled.div`
     background-size: cover;
    
    
-   @media screen and (max-width:992px){
+   @media screen and (max-width: ${({theme})=>theme.tabletWidth}px){
     background-image: ${props=>`url("/assets/${props.pathname}/background-${props.pathname}-tablet.jpg")`};
+    
    }
 
-   @media screen and (max-width:576px){
+   @media screen and (max-width: ${({theme})=>theme.mobileWidth}px){
     background-image: ${props=>`url("/assets/${props.pathname}/background-${props.pathname}-mobile.jpg")`};
    }
 `

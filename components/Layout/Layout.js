@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 
 
-const Layout = ({children}) => {
+const Layout = ({children, isMobile}) => {
 
   const {pathname} = useRouter();
 
@@ -29,8 +29,7 @@ const Layout = ({children}) => {
   
   return (
     <LayoutWrapper pathname={direction}>
-        
-        <Header />
+        <Header  isMobile={isMobile<578? true : false}/>
         <main>{children}</main>
     </LayoutWrapper>
     
