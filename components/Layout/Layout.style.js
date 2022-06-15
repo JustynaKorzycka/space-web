@@ -7,7 +7,10 @@ export const LayoutWrapper = styled.div`
     background-image: ${props=>`url("/assets/${props.pathname}/background-${props.pathname}-desktop.jpg")`};
     background-repeat: no-repeat;
     background-size: cover;
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: ${props=>props.justifySpecific};
+    
    
    @media screen and (max-width: ${({theme})=>theme.tabletWidth}px){
     background-image: ${props=>`url("/assets/${props.pathname}/background-${props.pathname}-tablet.jpg")`};

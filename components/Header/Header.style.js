@@ -10,9 +10,11 @@ export const HeaderSection = styled.section`
         justify-content: space-between;
         align-items: center;
         padding: 40px 0 0 55px;
+        margin-bottom: 76px;
 
         @media screen and (max-width: ${({theme})=>theme.tabletWidth}px){
             padding: 0 0 0 39px;
+            margin-bottom: 40px;
         }
 
 
@@ -67,6 +69,7 @@ export const HeaderSection = styled.section`
         justify-content: space-between;
         padding:24px ;
         align-items: center;
+        
         
       
         .menu-ico{

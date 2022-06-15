@@ -9,10 +9,12 @@ const Layout = ({children, isMobile}) => {
   const {pathname} = useRouter();
 
   let direction;
+  let justifySpecific = 'flex-start';
 
   switch(pathname){
     case '/':
       direction='home';
+      justifySpecific='space-between';
       break;
     case '/crew':
       direction='crew';
@@ -26,11 +28,13 @@ const Layout = ({children, isMobile}) => {
     default:
       direction='home';
   }
+
   
   return (
-    <LayoutWrapper pathname={direction}>
+    <LayoutWrapper pathname={direction} justifySpecific={justifySpecific}>
         <Header  isMobile={isMobile<578? true : false}/>
-        <main>{children}</main>
+        {children}
+          
     </LayoutWrapper>
     
   )
