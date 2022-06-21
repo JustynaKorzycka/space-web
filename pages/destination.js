@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { ContainerMain, ContainerWrapper, PlanetSection, PlanetNavbar, PlanetDescription } from '../styles/Destinations.style'
 import {destinations} from '../data/data.json';
 import Button from '../components/PlanetDescription/Button';
+import PageTitle from '../components/PageTitle';
 
 const Destination = () => {
   
@@ -19,7 +20,7 @@ const Destination = () => {
 
     <ContainerMain>
       <ContainerWrapper>
-        <h5><span>01 </span>Pick your destination</h5>
+        <PageTitle  text='Pick your destination' number='01'/>
         <PlanetSection>
           <div className='image-section'>
             <Image src={`${planetData.images.png}`} height={445} width={445}/>

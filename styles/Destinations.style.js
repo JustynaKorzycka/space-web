@@ -19,16 +19,7 @@ export const ContainerWrapper = styled.div`
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    h5{
-        text-transform: uppercase;
-
-        span{
-            opacity: 0.25;
-            font-weight: 700;
-        }
-    }
+    justify-content: center;
     
     @media screen and (max-width: 1160px){
         margin-left: 25px;
@@ -38,9 +29,6 @@ export const ContainerWrapper = styled.div`
 
     @media screen and (max-width: ${({theme})=>theme.tabletWidth}px){
         align-items: center;
-        h5{
-            align-self: flex-start;
-        }
     }
 
 `
@@ -48,7 +36,7 @@ export const ContainerWrapper = styled.div`
 export const PlanetSection = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 37px; 
+    margin-top: 20px;
 
     .image-section{
         flex-basis: 40%;

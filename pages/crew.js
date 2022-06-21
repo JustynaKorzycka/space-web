@@ -1,8 +1,11 @@
-import React from 'react'
+import {ContainerMain } from '../styles/Crew.style';
 
 const Crew = () => {
   return (
-    <div>Crew</div>
+    <ContainerMain>
+
+      sss
+    </ContainerMain>
   )
 }
 
